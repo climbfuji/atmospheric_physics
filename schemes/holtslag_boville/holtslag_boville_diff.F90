@@ -25,7 +25,7 @@ module holtslag_boville_diff
   public :: hb_pbl_dependent_coefficients_run          ! formerly pblintd (also used by CLUBB)
   public :: hb_diff_exchange_coefficients_run          ! formerly austausch_pbl and compute_hb_diff logic
   public :: hb_diff_free_atm_exchange_coefficients_run ! formerly compute_hb_free_atm_diff logic
-  public :: holtslag_boville_diff_finalize
+  public :: holtslag_boville_diff_final
 
   ! tuning parameters used by HB and related subroutines
   ! PBL limits
@@ -704,9 +704,9 @@ contains
     end do
   end subroutine hb_diff_free_atm_exchange_coefficients_run
 
-!> \section arg_table_holtslag_boville_diff_finalize Argument Table
-!! \htmlinclude arg_table_holtslag_boville_diff_finalize.html
-  subroutine holtslag_boville_diff_finalize(errmsg, errflg)
+!> \section arg_table_holtslag_boville_diff_final Argument Table
+!! \htmlinclude arg_table_holtslag_boville_diff_final.html
+  subroutine holtslag_boville_diff_final(errmsg, errflg)
     ! Output arguments
     character(len=512), intent(out)   :: errmsg         ! error message
     integer,            intent(out)   :: errflg         ! error flag
@@ -717,6 +717,6 @@ contains
     if(allocated(ml2)) then
       deallocate(ml2)
     endif
-  end subroutine holtslag_boville_diff_finalize
+  end subroutine holtslag_boville_diff_final
 
 end module holtslag_boville_diff

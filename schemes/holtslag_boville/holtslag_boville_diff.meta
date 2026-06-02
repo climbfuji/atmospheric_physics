@@ -67,7 +67,7 @@
   intent = out
 
 [ccpp-arg-table]
-  name  = holtslag_boville_diff_finalize
+  name  = holtslag_boville_diff_final
   type  = scheme
 [ errmsg ]
   standard_name = ccpp_error_message
