@@ -1,6 +1,7 @@
 [ccpp-table-properties]
   name = zero_upper_boundary_condition
   type = scheme
+  module_name = diffusion_stubs
 
 [ccpp-arg-table]
   name  = zero_upper_boundary_condition_init
@@ -45,6 +46,7 @@
 [ccpp-table-properties]
   name = tms_beljaars_zero_stub
   type = scheme
+  module_name = diffusion_stubs
 
 [ccpp-arg-table]
   name  = tms_beljaars_zero_stub_run
@@ -119,6 +121,7 @@
 [ccpp-table-properties]
   name = turbulent_mountain_stress_add_drag_coefficient
   type = scheme
+  module_name = diffusion_stubs
 
 [ccpp-arg-table]
   name  = turbulent_mountain_stress_add_drag_coefficient_run
@@ -163,6 +166,7 @@
 [ccpp-table-properties]
   name = beljaars_add_wind_damping_rate
   type = scheme
+  module_name = diffusion_stubs
 
 [ccpp-arg-table]
   name  = beljaars_add_wind_damping_rate_run
@@ -207,6 +211,7 @@
 [ccpp-table-properties]
   name = beljaars_add_updated_residual_stress
   type = scheme
+  module_name = diffusion_stubs
 
 [ccpp-arg-table]
   name  = beljaars_add_updated_residual_stress_run
@@ -293,6 +298,7 @@
 [ccpp-table-properties]
   name = turbulent_mountain_stress_add_updated_surface_stress
   type = scheme
+  module_name = diffusion_stubs
 
 [ccpp-arg-table]
   name  = turbulent_mountain_stress_add_updated_surface_stress_run
@@ -391,6 +397,7 @@
 [ccpp-table-properties]
   name = vertical_diffusion_not_use_rairv
   type = scheme
+  module_name = diffusion_stubs
 
 [ccpp-arg-table]
   name  = vertical_diffusion_not_use_rairv_init

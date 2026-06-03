@@ -151,6 +151,7 @@
 [ccpp-table-properties]
   name = mmm_physics_accumulate_tendencies
   type = scheme
+  module_name = mmm_physics_compat
 
 [ccpp-arg-table]
   name = mmm_physics_accumulate_tendencies_timestep_init
@@ -409,6 +410,7 @@
 [ccpp-table-properties]
   name = mmm_physics_persist_states
   type = scheme
+  module_name = mmm_physics_compat
 
 [ccpp-arg-table]
   name = mmm_physics_persist_states_init
@@ -487,6 +489,7 @@
 [ccpp-table-properties]
   name = compute_characteristic_grid_length_scale
   type = scheme
+  module_name = mmm_physics_compat
 
 [ccpp-arg-table]
   name = compute_characteristic_grid_length_scale_init
@@ -529,6 +532,7 @@
 [ccpp-table-properties]
   name = geopotential_height_wrt_sfc_at_if_to_msl
   type = scheme
+  module_name = mmm_physics_compat
 
 [ccpp-arg-table]
   name = geopotential_height_wrt_sfc_at_if_to_msl_run
@@ -583,6 +587,7 @@
 [ccpp-table-properties]
   name = geopotential_height_wrt_sfc_to_msl
   type = scheme
+  module_name = mmm_physics_compat
 
 [ccpp-arg-table]
   name = geopotential_height_wrt_sfc_to_msl_run
