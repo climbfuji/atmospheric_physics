@@ -161,6 +161,12 @@
   type = integer
   dimensions = ()
   intent = in
+[ nlayp ]
+  standard_name = number_of_vertical_interfaces_in_RRTMGP
+  units = count
+  type = integer
+  dimensions = ()
+  intent = in
 [ pverp ]
   standard_name = vertical_interface_dimension
   units = count

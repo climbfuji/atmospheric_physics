@@ -12,7 +12,7 @@ module rrtmgp_inputs
 subroutine rrtmgp_inputs_run(dosw, dolw, do_snow, do_graupel, trick_rrtmgp,    &
                   pmid, pint, t, nday, idxday, coszrs, kdist_sw, kdist_lw,     &
                   lwup, stebol, ncol, ktopcam, ktoprad, nswbands, asdir, asdif,&
-                  sw_low_bounds, sw_high_bounds, aldir, aldif, nlay, pverp,    &
+                  sw_low_bounds, sw_high_bounds, aldir, aldif, nlay, nlayp, pverp, &
                   pver, cld, cldfsnow, cldfgrau, graupel_in_rad, gaslist_lc,   &
                   cldfprime, t_sfc, emis_sfc, t_rad, pmid_rad, pint_rad, t_day,&
                   pmid_day, pint_day, coszrs_day, alb_dir, alb_dif, gas_concs_lw, &
@@ -31,6 +31,7 @@ subroutine rrtmgp_inputs_run(dosw, dolw, do_snow, do_graupel, trick_rrtmgp,    &
      integer,                              intent(in) :: pver                  ! Number of vertical layers
      integer,                              intent(in) :: pverp                 ! Number of vertical interfaces
      integer,                              intent(in) :: nlay                  ! Number of vertical layers used in radiation calculation
+     integer,                              intent(in) :: nlayp                 ! Number of vertical interfaces used in radiation calculation (nlay + 1)
      integer,                              intent(in) :: nswbands              ! Number of shortwave bands
      integer,                              intent(in) :: ktopcam               ! Index in host model arrays of top level (layer or interface) at which RRTMGP is active
      integer,                              intent(in) :: ktoprad               ! Index in RRTMGP array corresponding to top layer or interface of host model arrays
@@ -95,10 +96,10 @@ subroutine rrtmgp_inputs_run(dosw, dolw, do_snow, do_graupel, trick_rrtmgp,    &
 
      allocate(t_rad(ncol, nlay))
      allocate(pmid_rad(ncol, nlay))
-     allocate(pint_rad(ncol, pverp))
+     allocate(pint_rad(ncol, nlayp))
      allocate(t_day(nday, nlay))
      allocate(pmid_day(nday, nlay))
-     allocate(pint_day(nday, pverp))
+     allocate(pint_day(nday, nlayp))
      allocate(coszrs_day(nday))
      allocate(alb_dir(nswbands, nday))
      allocate(alb_dif(nswbands, nday))
