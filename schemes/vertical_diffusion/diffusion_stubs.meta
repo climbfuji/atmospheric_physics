@@ -482,6 +482,7 @@
 [ccpp-table-properties]
   name = dropmixnuc_apply_surface_fluxes
   type = scheme
+  module_name = diffusion_stubs
 
 [ccpp-arg-table]
   name  = dropmixnuc_apply_surface_fluxes_run
